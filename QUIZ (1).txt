@@ -1,0 +1,243 @@
+@echo off
+title QUIZ GAME!
+color 02
+
+:menu
+title QUIZ GAME!
+cls
+color 02
+echo Welcome, to ............. THE MENU!
+echo ------------------------------------
+pause
+echo From here you can...........
+echo -----------------------------
+echo.
+echo 1. Start
+echo 2. Info
+echo 3. Exit
+pause
+
+set /p menuchoiece=
+
+if %menuchoiece% == 1 goto startgame
+if %menuchoiece% == 2 goto info
+if %menuchoiece% == 3 exit
+goto menu
+
+:info
+cls
+title info on Quiz
+color 0b
+pause
+echo This Quiz is by alasdair
+echo it is a Quiz Game
+echo continue useing this Quiz....
+pause                                                                                                                        
+cls
+goto menu
+
+:startgame
+cls
+title Welcome
+color 1a
+echo Please enter your name......
+echo.
+
+set /p player=
+echo.
+echo press any key to start
+pause >nul
+goto q1
+
+:q1
+cls
+title Question 1!
+cls
+echo Question 1
+echo ----------
+echo.
+echo what is the first windows os
+echo.
+echo A) windows 1.0
+echo B) Windows
+echo C) windows 95
+echo D) windows xp
+echo.
+set /p ans1=
+
+if %ans1% == a goto cr1
+if %ans1% == b goto wr1
+if %ans1% == c goto wr1
+if %ans1% == d goto wr1
+goto q1
+
+:wr1
+cls
+title Game over
+color 80
+echo Sorry, %player% but.... it's time to die! :'(
+echo press any key to die
+pause >nul
+exit
+
+:cr1
+cls
+title You did not die! ;)
+color 90
+echo congratz! you are 1 step closer to not dying well done! %player%
+echo.
+pause
+goto q2
+
+:q2
+cls
+title Question 2!
+cls
+echo Question 2
+echo ----------
+echo.
+echo what does ssd stand for
+echo.
+echo A) social state drive
+echo B) silly state driving
+echo C) state stone drive
+echo D) solid state drive
+echo.
+set /p ans1=
+
+if %ans1% == a goto wr1
+if %ans1% == b goto wr1
+if %ans1% == c goto wr1
+if %ans1% == d goto cr2
+goto q2
+
+:cr2
+cls
+title You did not die! ;)
+color 90
+echo congratz! you are 1 more step closer to not dying well done! %player%
+echo.
+pause
+goto q3
+
+:q3
+cls
+title Question 3!
+cls
+echo Question 3
+echo ----------
+echo.
+echo what year was nintendo founded?
+echo.
+echo A) 1985
+echo B) 1889
+echo C) 1997
+echo D) 1877
+echo.
+set /p ans1=
+
+if %ans1% == a goto wr1
+if %ans1% == b goto cr3
+if %ans1% == c goto wr1
+if %ans1% == d goto wr1
+goto q3
+
+:cr3
+cls
+title You did not die! ;)
+color 90
+echo congratz! you are 1 more step closer to not dying well done! %player%
+echo.
+pause
+goto q4
+
+:q4
+cls
+title Question 4!
+cls
+echo Question 4
+echo ----------
+echo.
+echo what year was Disneyland built
+echo.
+echo A) 2000
+echo B) 1869
+echo C) 1955
+echo D) 1982
+set /p ans1=
+
+if %ans1% == a goto wr1
+if %ans1% == b goto wr1
+if %ans1% == c goto cr4
+if %ans1% == d goto wr1
+goto q4
+
+:cr4
+cls
+title You did not die! ;)
+color 90
+echo congratz! you are 1 more step closer to not dying well done! %player%
+echo.
+pause
+goto q5
+
+:q5
+cls
+title Question 5!
+cls
+echo Question 5
+echo ----------
+echo.
+echo who is the founder of Android
+echo.
+echo A) steve jobs
+echo B) andy rubin
+echo C) Larry Page
+echo D) Sergey Brin
+set /p ans1=
+
+if %ans1% == a goto wr1
+if %ans1% == b goto cr5
+if %ans1% == c goto wr1
+if %ans1% == d goto wr1
+goto q5
+
+
+:win
+cls
+title YOU WINNNNN!
+color 36
+echo congratz! you win well done! %player%
+echo.
+pause
+goto menu
+
+:q6
+cls
+title Question 6!
+cls
+echo Question 6
+echo ----------
+echo.
+echo why is orenge county called orenge county
+echo.
+echo A) Becuse they had a lot of orenges
+echo B) Becuse ther is like no orenges
+echo C) Becuse they had a lot of potatos
+echo D) Becuse they had a lot of apples
+set /p ans1=
+
+if %ans1% == a goto win
+if %ans1% == b goto wr1
+if %ans1% == c goto wr1
+if %ans1% == d goto wr1
+goto q6
+
+:cr5
+cls
+title You did not die! ;)
+color 90
+echo congratz! you are 1 more step closer to not dying well done! %player%
+echo.
+pause
+goto q6
